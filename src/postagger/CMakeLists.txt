@@ -41,7 +41,7 @@ add_executable (otpos otpos.cpp
     io.h
     io.cpp
     ${postagger_SRC})
-target_link_libraries (otpos boost_program_options_static_lib)
+target_link_libraries (otpos boost_program_options)
 set_target_properties (otpos PROPERTIES
     OUTPUT_NAME otpos
     RUNTIME_OUTPUT_DIRECTORY ${TOOLS_DIR}/train/)

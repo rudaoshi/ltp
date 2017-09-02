@@ -25,7 +25,7 @@ add_library (segmentor_static_lib
     segment_dll.h
     segment_dll.cpp
     ${segment_SRC})
-target_link_libraries (segmentor_static_lib boost_regex_static_lib)
+target_link_libraries (segmentor_static_lib boost_regex)
 set_target_properties (segmentor_static_lib
     PROPERTIES
     OUTPUT_NAME segmentor
@@ -39,7 +39,7 @@ add_library (segmentor_shared_lib SHARED
     segment_dll.cpp
     ${segment_SRC})
 #target_link_libraries (segmentor_shared_lib boost_regex_shared_lib)
-target_link_libraries (segmentor_shared_lib boost_regex_static_lib)
+target_link_libraries (segmentor_shared_lib boost_regex)
 set_target_properties (segmentor_shared_lib PROPERTIES
     VERSION     ${segment_VERSION}
     OUTPUT_NAME segmentor)
@@ -59,7 +59,7 @@ add_executable (otcws otcws.cpp
     io.h
     io.cpp
     ${segment_SRC})
-target_link_libraries (otcws boost_regex_static_lib boost_program_options_static_lib)
+target_link_libraries (otcws boost_regex boost_program_options)
 set_target_properties (otcws PROPERTIES  OUTPUT_NAME otcws
     RUNTIME_OUTPUT_DIRECTORY ${TOOLS_DIR}/train/)
 

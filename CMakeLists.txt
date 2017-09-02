@@ -7,11 +7,11 @@ set (CMAKE_MODULE_PATH      ${PROJECT_SOURCE_DIR}/cmake)
 
 if (APPLE)
   add_definitions(-DGTEST_HAS_TR1_TUPLE=0)
-  set(CMAKE_CXX_FLAGS "-std=c++0x -Wno-c++11-narrowing")
+  set(CMAKE_CXX_FLAGS "-std=c++11 -Wno-c++11-narrowing")
 elseif(UNIX)
-  set(CMAKE_CXX_FLAGS "-std=c++0x -fPIC")
+  set(CMAKE_CXX_FLAGS "-std=c++11 -fPIC")
 elseif(MINGW)
-  set(CMAKE_CXX_FLAGS "-std=c++0x")
+  set(CMAKE_CXX_FLAGS "-std=c++11")
 elseif(MSVC)
   add_definitions(-D_WINDOWS)  # make dynet happy at `dynet/mem.cc(7)`
   add_definitions(-DBOOST_ALL_NO_LIB)  # disable boost auto-linking on windows

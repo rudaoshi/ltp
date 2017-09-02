@@ -40,7 +40,7 @@ add_executable (nndepparser
     io.h
     io.cpp
     ${nndepparser_SRC})
-target_link_libraries (nndepparser boost_program_options_static_lib)
+target_link_libraries (nndepparser boost_program_options)
 set_target_properties (nndepparser PROPERTIES
     OUTPUT_NAME nndepparser
     RUNTIME_OUTPUT_DIRECTORY ${TOOLS_DIR}/train/)

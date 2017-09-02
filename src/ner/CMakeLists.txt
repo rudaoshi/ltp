@@ -40,7 +40,7 @@ add_executable (otner otner.cpp
     io.h
     io.cpp
     ${ner_SRC})
-target_link_libraries (otner boost_program_options_static_lib)
+target_link_libraries (otner boost_program_options)
 set_target_properties (otner PROPERTIES
     OUTPUT_NAME otner
     RUNTIME_OUTPUT_DIRECTORY ${TOOLS_DIR}/train/)

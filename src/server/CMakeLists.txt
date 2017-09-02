@@ -19,9 +19,9 @@ target_link_libraries (ltp_server
     srl_static_lib
     xml4nlp
     pthread
-    boost_program_options_static_lib
-    boost_regex_static_lib
-    boost_serialization_static_lib
+    boost_program_options
+    boost_regex
+    boost_serialization
     dl
     dynet
     jsoncpp_lib_static)

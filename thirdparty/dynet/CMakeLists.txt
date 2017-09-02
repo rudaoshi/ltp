@@ -114,9 +114,9 @@ endfunction()
 set(Boost_INCLUDE_DIR ${THIRDPARTY_DIR}/boost/include)
 set(Boost_LIBRARY_DIRS ${LIBRARY_OUTPUT_PATH})
 set(Boost_LIBRARIES
-    boost_regex_static_lib
-    boost_program_options_static_lib
-    boost_serialization_static_lib
+    boost_regex
+    boost_program_options
+    boost_serialization
     )
 message("-- Boost dir is " ${Boost_INCLUDE_DIR})
 include_directories(${Boost_INCLUDE_DIR})

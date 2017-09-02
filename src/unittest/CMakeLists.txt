@@ -14,7 +14,7 @@ set (unittest_SRC unittest.cpp
     ${SOURCE_DIR}/segmentor/partial_segmentation.cpp
     ${SOURCE_DIR}/parser.n/io.cpp)
 add_executable (unittest ${unittest_SRC})
-target_link_libraries (unittest gtest boost_regex_static_lib pthread
+target_link_libraries (unittest gtest boost_regex pthread
     segmentor_static_lib
     parser_static_lib)
 set_target_properties(unittest PROPERTIES
@@ -27,6 +27,6 @@ target_link_libraries (model_validation
     postagger_static_lib
     ner_static_lib
     parser_static_lib
-    boost_program_options_static_lib)
+    boost_program_options)
 set_target_properties(model_validation PROPERTIES
     RUNTIME_OUTPUT_DIRECTORY ${EXECUTABLE_OUTPUT_PATH}/unittest/)
